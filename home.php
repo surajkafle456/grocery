@@ -81,23 +81,7 @@ $cat_result = mysqli_query($conn, $cat_query);
     </div>
 </div>
 
-<!-- ================= CATEGORIES ================= -->
-<div class="categories">
 
-    <!-- ALL BUTTON -->
-    <a href="home.php" class="category-btn <?= ($category == "") ? 'active' : '' ?>">
-        All
-    </a>
-
-    <?php while($cat = mysqli_fetch_assoc($cat_result)): ?>
-        <a href="home.php?category=<?= urlencode($cat['category']) ?>"
-           class="category-btn <?= ($category == $cat['category']) ? 'active' : '' ?>">
-           
-           <?= htmlspecialchars($cat['category']) ?>
-        </a>
-    <?php endwhile; ?>
-
-</div>
 
 <!-- ================= PRODUCTS ================= -->
 <div class="products">
